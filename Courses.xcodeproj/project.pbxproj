@@ -3,23 +3,54 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52401DCABB392E7F674C03CB /* Pods_Courses.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8D126B7E8A91ABEA30820E /* Pods_Courses.framework */; };
+		B80B953225AA60C200B52C80 /* Courses.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B80B953025AA60C200B52C80 /* Courses.xcdatamodeld */; };
+		B80B953625AA615700B52C80 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B953525AA615700B52C80 /* Persistence.swift */; };
 		B84FE14425988F8C00EE1A5E /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84FE14325988F8C00EE1A5E /* Start.swift */; };
 		B84FE1482598967B00EE1A5E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84FE1472598967B00EE1A5E /* Data.swift */; };
+		B86F9C9825A4C2D000BE677B /* DarkTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86F9C9725A4C2D000BE677B /* DarkTabBar.swift */; };
+		B86F9C9B25A4C2D600BE677B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86F9C9A25A4C2D600BE677B /* MainView.swift */; };
+		B86F9C9E25A4C2D800BE677B /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86F9C9D25A4C2D800BE677B /* ViewRouter.swift */; };
+		B86F9CAB25A4D0E500BE677B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86F9CAA25A4D0E500BE677B /* Account.swift */; };
+		B86F9CD625A509E300BE677B /* Likes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86F9CD525A509E300BE677B /* Likes.swift */; };
+		B86F9CDC25A5B32000BE677B /* search.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86F9CDB25A5B31F00BE677B /* search.swift */; };
+		B86F9CE225A5B88C00BE677B /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86F9CE125A5B88C00BE677B /* Stat.swift */; };
+		B86F9CE525A78DD400BE677B /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86F9CE425A78DD100BE677B /* AddTask.swift */; };
+		B8785AE825B1044B002A65A0 /* socialMedia.json in Resources */ = {isa = PBXBuildFile; fileRef = B8785AE725B1044B002A65A0 /* socialMedia.json */; };
+		B8785AEB25B10451002A65A0 /* backtoschool.json in Resources */ = {isa = PBXBuildFile; fileRef = B8785AEA25B10451002A65A0 /* backtoschool.json */; };
+		B8785AEE25B10457002A65A0 /* backtoschool2.json in Resources */ = {isa = PBXBuildFile; fileRef = B8785AED25B10457002A65A0 /* backtoschool2.json */; };
 		B8A374C7258CED85008A5756 /* CoursesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A374C6258CED85008A5756 /* CoursesApp.swift */; };
 		B8A374C9258CED85008A5756 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A374C8258CED85008A5756 /* ContentView.swift */; };
 		B8A374CB258CED88008A5756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A374CA258CED88008A5756 /* Assets.xcassets */; };
 		B8A374CE258CED88008A5756 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A374CD258CED88008A5756 /* Preview Assets.xcassets */; };
 		B8A374E1259776D2008A5756 /* profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A374E0259776D2008A5756 /* profile.swift */; };
-		B8EA7E302598D4700083AAC9 /* coursesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA7E2F2598D4700083AAC9 /* coursesList.swift */; };
+		B8C6D41825B35591004664D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8C6D41725B35591004664D2 /* GoogleService-Info.plist */; };
+		B8EA7E3B259A1D9C0083AAC9 /* DataForList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA7E3A259A1D9C0083AAC9 /* DataForList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E7B0165A539547DB71F70A8 /* Pods-Courses.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Courses.release.xcconfig"; path = "Target Support Files/Pods-Courses/Pods-Courses.release.xcconfig"; sourceTree = "<group>"; };
+		6F8D126B7E8A91ABEA30820E /* Pods_Courses.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Courses.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C0E6554BBD5E6AA85D1F133 /* Pods-Courses.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Courses.debug.xcconfig"; path = "Target Support Files/Pods-Courses/Pods-Courses.debug.xcconfig"; sourceTree = "<group>"; };
+		B80B953125AA60C200B52C80 /* CoursesCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoursesCoreData.xcdatamodel; sourceTree = "<group>"; };
+		B80B953525AA615700B52C80 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B84FE14325988F8C00EE1A5E /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
 		B84FE1472598967B00EE1A5E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		B86F9C9725A4C2D000BE677B /* DarkTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkTabBar.swift; sourceTree = "<group>"; };
+		B86F9C9A25A4C2D600BE677B /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B86F9C9D25A4C2D800BE677B /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		B86F9CAA25A4D0E500BE677B /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		B86F9CD525A509E300BE677B /* Likes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Likes.swift; sourceTree = "<group>"; };
+		B86F9CDB25A5B31F00BE677B /* search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = search.swift; sourceTree = "<group>"; };
+		B86F9CE125A5B88C00BE677B /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
+		B86F9CE425A78DD100BE677B /* AddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
+		B8785AE725B1044B002A65A0 /* socialMedia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = socialMedia.json; sourceTree = "<group>"; };
+		B8785AEA25B10451002A65A0 /* backtoschool.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = backtoschool.json; sourceTree = "<group>"; };
+		B8785AED25B10457002A65A0 /* backtoschool2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = backtoschool2.json; sourceTree = "<group>"; };
 		B8A374C3258CED85008A5756 /* Courses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Courses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A374C6258CED85008A5756 /* CoursesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesApp.swift; sourceTree = "<group>"; };
 		B8A374C8258CED85008A5756 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,7 +58,8 @@
 		B8A374CD258CED88008A5756 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B8A374CF258CED88008A5756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8A374E0259776D2008A5756 /* profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.swift; sourceTree = "<group>"; };
-		B8EA7E2F2598D4700083AAC9 /* coursesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coursesList.swift; sourceTree = "<group>"; };
+		B8C6D41725B35591004664D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B8EA7E3A259A1D9C0083AAC9 /* DataForList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +67,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52401DCABB392E7F674C03CB /* Pods_Courses.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FF5BE19D3EFC8BB08F5EC60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C0E6554BBD5E6AA85D1F133 /* Pods-Courses.debug.xcconfig */,
+				2E7B0165A539547DB71F70A8 /* Pods-Courses.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B8A374BA258CED85008A5756 = {
 			isa = PBXGroup;
 			children = (
+				B8C6D41725B35591004664D2 /* GoogleService-Info.plist */,
 				B8A374C5258CED85008A5756 /* Courses */,
 				B8A374C4258CED85008A5756 /* Products */,
+				0FF5BE19D3EFC8BB08F5EC60 /* Pods */,
+				FA38FAE2EE29222EB89EFB72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,11 +105,17 @@
 		B8A374C5258CED85008A5756 /* Courses */ = {
 			isa = PBXGroup;
 			children = (
-				B8A374E625977788008A5756 /* Views */,
-				B8A374C6258CED85008A5756 /* CoursesApp.swift */,
-				B8A374C8258CED85008A5756 /* ContentView.swift */,
-				B8A374CA258CED88008A5756 /* Assets.xcassets */,
+				B8ED37DC25B0A7E7002AE9DB /* Animation */,
+				B86F9C9D25A4C2D800BE677B /* ViewRouter.swift */,
+				B86F9C9A25A4C2D600BE677B /* MainView.swift */,
+				B86F9C9725A4C2D000BE677B /* DarkTabBar.swift */,
 				B8A374E52597777B008A5756 /* Modals */,
+				B8A374E625977788008A5756 /* Views */,
+				B8A374C8258CED85008A5756 /* ContentView.swift */,
+				B80B953025AA60C200B52C80 /* Courses.xcdatamodeld */,
+				B80B953525AA615700B52C80 /* Persistence.swift */,
+				B8A374C6258CED85008A5756 /* CoursesApp.swift */,
+				B8A374CA258CED88008A5756 /* Assets.xcassets */,
 				B8A374CF258CED88008A5756 /* Info.plist */,
 				B8A374CC258CED88008A5756 /* Preview Content */,
 			);
@@ -83,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				B84FE1472598967B00EE1A5E /* Data.swift */,
+				B8EA7E3A259A1D9C0083AAC9 /* DataForList.swift */,
 			);
 			path = Modals;
 			sourceTree = "<group>";
@@ -91,10 +143,32 @@
 			isa = PBXGroup;
 			children = (
 				B84FE14325988F8C00EE1A5E /* Start.swift */,
+				B86F9CAA25A4D0E500BE677B /* Account.swift */,
+				B86F9CD525A509E300BE677B /* Likes.swift */,
 				B8A374E0259776D2008A5756 /* profile.swift */,
-				B8EA7E2F2598D4700083AAC9 /* coursesList.swift */,
+				B86F9CDB25A5B31F00BE677B /* search.swift */,
+				B86F9CE125A5B88C00BE677B /* Stat.swift */,
+				B86F9CE425A78DD100BE677B /* AddTask.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B8ED37DC25B0A7E7002AE9DB /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				B8785AED25B10457002A65A0 /* backtoschool2.json */,
+				B8785AEA25B10451002A65A0 /* backtoschool.json */,
+				B8785AE725B1044B002A65A0 /* socialMedia.json */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		FA38FAE2EE29222EB89EFB72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F8D126B7E8A91ABEA30820E /* Pods_Courses.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8A374D2258CED88008A5756 /* Build configuration list for PBXNativeTarget "Courses" */;
 			buildPhases = (
+				262587917A52AAC4E839E4A8 /* [CP] Check Pods Manifest.lock */,
 				B8A374BF258CED85008A5756 /* Sources */,
 				B8A374C0258CED85008A5756 /* Frameworks */,
 				B8A374C1258CED85008A5756 /* Resources */,
+				45F289765299D9CCAF6BEE40 /* [CP] Embed Pods Frameworks */,
+				3B3175C7473B53E825BC8996 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,23 +231,96 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8785AEB25B10451002A65A0 /* backtoschool.json in Resources */,
 				B8A374CE258CED88008A5756 /* Preview Assets.xcassets in Resources */,
+				B8785AEE25B10457002A65A0 /* backtoschool2.json in Resources */,
+				B8785AE825B1044B002A65A0 /* socialMedia.json in Resources */,
 				B8A374CB258CED88008A5756 /* Assets.xcassets in Resources */,
+				B8C6D41825B35591004664D2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		262587917A52AAC4E839E4A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Courses-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B3175C7473B53E825BC8996 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Courses/Pods-Courses-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Courses/Pods-Courses-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Courses/Pods-Courses-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45F289765299D9CCAF6BEE40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Courses/Pods-Courses-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Courses/Pods-Courses-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Courses/Pods-Courses-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B8A374BF258CED85008A5756 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8EA7E3B259A1D9C0083AAC9 /* DataForList.swift in Sources */,
+				B86F9CAB25A4D0E500BE677B /* Account.swift in Sources */,
+				B80B953625AA615700B52C80 /* Persistence.swift in Sources */,
+				B86F9C9B25A4C2D600BE677B /* MainView.swift in Sources */,
+				B86F9C9825A4C2D000BE677B /* DarkTabBar.swift in Sources */,
 				B84FE14425988F8C00EE1A5E /* Start.swift in Sources */,
 				B84FE1482598967B00EE1A5E /* Data.swift in Sources */,
-				B8EA7E302598D4700083AAC9 /* coursesList.swift in Sources */,
+				B86F9C9E25A4C2D800BE677B /* ViewRouter.swift in Sources */,
 				B8A374E1259776D2008A5756 /* profile.swift in Sources */,
 				B8A374C9258CED85008A5756 /* ContentView.swift in Sources */,
+				B86F9CDC25A5B32000BE677B /* search.swift in Sources */,
+				B80B953225AA60C200B52C80 /* Courses.xcdatamodeld in Sources */,
+				B86F9CE525A78DD400BE677B /* AddTask.swift in Sources */,
+				B86F9CE225A5B88C00BE677B /* Stat.swift in Sources */,
+				B86F9CD625A509E300BE677B /* Likes.swift in Sources */,
 				B8A374C7258CED85008A5756 /* CoursesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +446,7 @@
 		};
 		B8A374D3258CED88008A5756 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C0E6554BBD5E6AA85D1F133 /* Pods-Courses.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,6 +469,7 @@
 		};
 		B8A374D4258CED88008A5756 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E7B0165A539547DB71F70A8 /* Pods-Courses.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -360,6 +512,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B80B953025AA60C200B52C80 /* Courses.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B80B953125AA60C200B52C80 /* CoursesCoreData.xcdatamodel */,
+			);
+			currentVersion = B80B953125AA60C200B52C80 /* CoursesCoreData.xcdatamodel */;
+			path = Courses.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B8A374BB258CED85008A5756 /* Project object */;
 }

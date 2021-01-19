@@ -6,8 +6,13 @@
 //
 
 import SwiftUI
+import GoogleSignIn
+import FirebaseCore
+import FirebaseAuth
 
 struct profile: View {
+    @UIApplicationDelegateAdaptor(AppDelegate.self)
+    var delegate 
     var body: some View {
         ZStack{
             LinearGradient(gradient: .init(colors: [Color("Color-3"), Color("Color")]), startPoint: .bottom, endPoint: .top).edgesIgnoringSafeArea(.all)
@@ -19,9 +24,7 @@ struct profile: View {
                     Homes()
                 }
             }
-            
-            //        .background(Color("Color"))
-            //        .ignoresSafeArea(.all)
+
         }
     }
 }
@@ -34,6 +37,7 @@ struct profile_Previews: PreviewProvider {
 
 struct Homes: View {
     @State var index = 0
+//    @ObservedObject var info : AppDelegate
     var body: some View{
         VStack{
             Image("1")
@@ -99,25 +103,61 @@ struct Homes: View {
             }
             else if index == 1{
                 SignUp()
-            }
-            else{
-                teacher()
-            }
-            if index == 0{
+                HStack{
+                Text("Нет аккаунта?")
+                    .foregroundColor(.white)
+                    .fontWeight(.semibold)
                 Button(action:{
                     
                 }) {
-                    Text("Forget Password?")
-                        .foregroundColor(.white)
+                    Text("Регистрация")
+                        .foregroundColor(.blue)
                         .fontWeight(.semibold)
-                        .padding(5)
+                        .padding(1)
+                    
                 }
-                .padding(.top, 20)
+//                .padding(.top, 20)
+            }.padding(.top, 20)
+            }
+            else{
+                teacher()
+                HStack{
+                Text("Нет аккаунта?")
+                    .foregroundColor(.white)
+                    .fontWeight(.semibold)
+                Button(action:{
+                    
+                }) {
+                    Text("Регистрация")
+                        .foregroundColor(.blue)
+                        .fontWeight(.semibold)
+                        .padding(1)
+                    
+                }
+//                .padding(.top, 20)
+            }.padding(.top, 20)
+            }
+            if index == 0{
+                HStack{
+                Text("Нет аккаунта?")
+                    .foregroundColor(.white)
+                    .fontWeight(.semibold)
+                Button(action:{
+                    
+                }) {
+                    Text("Регистрация")
+                        .foregroundColor(.blue)
+                        .fontWeight(.semibold)
+                        .padding(1)
+                    
+                }
+//                .padding(.top, 20)
+            }.padding(.top, 20)
             }
             HStack(spacing: 15){
                 Color.white.opacity(0.7)
                     .frame(width: 35, height: 1)
-                Text("OR")
+                Text("или")
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                 Color.white.opacity(0.7)
@@ -130,21 +170,28 @@ struct Homes: View {
                     {
                     Image("facebook")
                         .renderingMode(.original)
-                        .padding(10)
+//                        .padding(10)
+                        .frame(width: 50, height: 50)
                 }
                 .background(Color.white)
                 .clipShape(Circle())
                 
-                Button(action:{})
+                Button(action:{
+                    GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.first?.rootViewController
+                    
+                    GIDSignIn.sharedInstance()?.signIn()
+                })
                     {
                     Image("google")
                         .renderingMode(.original)
-                        .frame(width: 50, height: 50)
-                        .padding(10)
+//                        .padding(10)
+//                        .frame(width: 50, height: 50)
                 }
                 .background(Color.white)
                 .clipShape(Circle())
                 .padding(.leading, 25)
+                
+                    
             }
             .padding(.top, 10)
         }
@@ -160,7 +207,7 @@ struct Login: View {
             HStack(spacing: 15){
                 Image(systemName: "envelope")
                     .foregroundColor(.black)
-                TextField("Enter Email Address", text: $mail)
+                TextField("Электрольная почта", text: $mail)
             }
             .padding(.vertical, 20)
             Divider()
@@ -170,7 +217,7 @@ struct Login: View {
                     .resizable()
                     .frame(width: 15, height: 18)
                     .foregroundColor(.black)
-                SecureField("Password", text: $pass)
+                SecureField("Пароль", text: $pass)
                 
                 Button(action: {
                 }) {
@@ -187,14 +234,12 @@ struct Login: View {
         .padding(.top, 25)
         
         Button(action:{
-            
         }) {
-            Text("LOGIN")
+            Text("Войти")
                 .foregroundColor(.white)
                 .fontWeight(.bold)
                 .padding(.vertical)
-//                или - 100
-                .frame(width: UIScreen.main.bounds.width - 20)
+                .frame(width: UIScreen.main.bounds.width - 100)
         }
         .background(LinearGradient(gradient: .init(colors: [Color("Color"), Color("Color-3")]), startPoint: .leading, endPoint: .trailing))
         .cornerRadius(8)
@@ -221,7 +266,7 @@ struct SignUp : View {
                       Image(systemName: "envelope")
                           .foregroundColor(.black)
                       
-                      TextField("Enter Email Address", text: self.$mail)
+                      TextField("Электронная почта", text: self.$mail)
                       
                   }.padding(.vertical, 20)
                   
@@ -234,7 +279,7 @@ struct SignUp : View {
                       .frame(width: 15, height: 18)
                       .foregroundColor(.black)
                       
-                      SecureField("Password", text: self.$pass)
+                      SecureField("Пароль", text: self.$pass)
                       
                       Button(action: {
                           
@@ -255,7 +300,7 @@ struct SignUp : View {
                       .frame(width: 15, height: 18)
                       .foregroundColor(.black)
                       
-                      SecureField("Re-Enter", text: self.$repass)
+                      SecureField("Повторите пароль", text: self.$repass)
                       
                       Button(action: {
                           
@@ -280,7 +325,7 @@ struct SignUp : View {
                   
               }) {
                   
-                  Text("SIGNUP")
+                  Text("Войти")
                       .foregroundColor(.white)
                       .fontWeight(.bold)
                       .padding(.vertical)
@@ -315,7 +360,7 @@ struct teacher : View {
                       Image(systemName: "envelope")
                           .foregroundColor(.black)
                       
-                      TextField("Enter Email Address", text: self.$mail)
+                      TextField("Электронная почта", text: self.$mail)
                       
                   }.padding(.vertical, 20)
                   
@@ -328,7 +373,7 @@ struct teacher : View {
                       .frame(width: 15, height: 18)
                       .foregroundColor(.black)
                       
-                      SecureField("Password", text: self.$pass)
+                      SecureField("Пароль", text: self.$pass)
                       
                       Button(action: {
                           
@@ -349,7 +394,7 @@ struct teacher : View {
                       .frame(width: 15, height: 18)
                       .foregroundColor(.black)
                       
-                      SecureField("Re-Enter", text: self.$repass)
+                      SecureField("Повторите пароль", text: self.$repass)
                       
                       Button(action: {
                           
@@ -374,7 +419,7 @@ struct teacher : View {
                   
               }) {
                   
-                  Text("SIGNUP")
+                  Text("Войти")
                       .foregroundColor(.white)
                       .fontWeight(.bold)
                       .padding(.vertical)

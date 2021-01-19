@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UIKit
+import Lottie
 
 struct OnBoarding: View {
 
@@ -33,6 +34,20 @@ struct OnBoarding_Previews: PreviewProvider {
         OnBoarding()
     }
 }
+struct LottieViewStart: UIViewRepresentable {
+    var animationName: String
+    func makeUIView(context: Context) -> AnimationView {
+        let view = AnimationView(name: animationName, bundle: Bundle.main)
+        view.loopMode = .loop
+        view.contentMode = .scaleAspectFit
+        view.play()
+        return view
+    }
+    
+    func updateUIView(_ uiView:AnimationView, context: Context) {
+
+    }
+}
 
 
 struct pages: View {
@@ -42,37 +57,51 @@ struct pages: View {
                     ForEach(Data) { page in
                         GeometryReader { g in
                             VStack {
-                                Image(page.image)
-                                    .resizable()
-                                    .frame(width: 300, height: 300, alignment: .center)
-                                    .cornerRadius(100)
-                                    .scaledToFit()
+                                LottieViewStart(animationName: page.image)
+                                    .frame(width: 0, height: 0, alignment: .center)
+                                    .offset(x: 0, y: 300.0)
+//                                Image(page.image)
+//                                    .resizable()
+//                                    .frame(width: 300, height: 300, alignment: .center)
+//                                    .cornerRadius(100)
+//                                    .scaledToFit()
                                 Text(page.title)
                                     .font(.title).bold()
                                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 20)
+                                    .offset(y: -90)
                                 Text(page.descrip)
                                     .multilineTextAlignment(.center)
                                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                                    .offset(y: -100)
                             }
                             .opacity(Double(g.frame(in : . global).minX)/200+1)
                         }
                     }
                 }
-                .padding(20)
+//                .padding(20)
                 .edgesIgnoringSafeArea(.top)
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
             
             NavigationLink(
                 destination: profile().navigationBarBackButtonHidden(true).navigationBarHidden(true),
                 label: {
-                    Text("Start")
+                    Text("Следующее")
                         .font(.headline)
                         .frame(width: 200, height: 40, alignment: .center)
                         .foregroundColor(.white)
                         .background(Color("Color"))
                         .cornerRadius(10)
+                    
                 })
-            Spacer()
+            NavigationLink(
+                destination: profile().navigationBarBackButtonHidden(true).navigationBarHidden(true),
+                label: {
+                    Text("Пропустить")
+                        .padding(.top, 5)
+                        .foregroundColor(.gray)
+                })
+
+//            Spacer()
             
         }
         

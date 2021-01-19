@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import FirebaseCore
+import FirebaseAuth
 
  struct ContentView: View {
      var body: some View {
-        OnBoarding()
+//        OnBoarding()
+        MainView()
      }
  }
  
