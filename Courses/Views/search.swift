@@ -37,6 +37,7 @@ struct searchIcon : View {
                     Text("Поиск курсов")
                         .font(.title)
                         .fontWeight(.bold)
+                        
                     
                     Spacer()
                 }
@@ -48,7 +49,7 @@ struct searchIcon : View {
                     .background(Color.black.opacity(0.07))
                     .cornerRadius(10)
                     .padding(.horizontal)
-                    .padding(.top,25)
+                    .padding(.top,13)
                 
                 // Carousel List...
                 
@@ -59,7 +60,7 @@ struct searchIcon : View {
                         Image("g\(index)")
                             .resizable()
                             // adding animation...
-                            .frame(height: self.index == index ?  230 : 180)
+                            .frame(height: self.index == index ?  250 : 280)
                             .cornerRadius(15)
                             .padding(.horizontal)
                             // for identifying current index....
@@ -122,7 +123,7 @@ struct searchIcon : View {
             }
             .padding(.vertical)
         }
-        .background(Color.black.opacity(0.05).edgesIgnoringSafeArea(.all))
+        .background(Color("Color-3").edgesIgnoringSafeArea(.all))
     }
 }
 
@@ -145,7 +146,7 @@ struct GridView : View {
                         
                         Image(game.image)
                             .resizable()
-                            .frame(height: 250)
+                            .frame(height: 200)
                             .cornerRadius(15)
                         
                         Button {
@@ -195,7 +196,7 @@ struct GridView : View {
                         
                         Image(game.image)
                             .resizable()
-                            .frame(width: (UIScreen.main.bounds.width - 45) / 2,height: 250)
+                            .frame(width: (UIScreen.main.bounds.width - 45) / 2,height: 200)
                             .cornerRadius(15)
                         
                         Button {

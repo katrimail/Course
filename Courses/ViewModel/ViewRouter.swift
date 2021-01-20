@@ -14,13 +14,13 @@ class ViewRouter: ObservableObject {
     func imageName(route: Route) -> String {
         switch route {
         case .home:
-            return "house.fill"
+            return "chart.bar.xaxis"
         case .search:
             return "magnifyingglass"
         case .add:
-            return "plus.app"
+            return "arrowtriangle.forward.square"
         case .likes:
-            return "heart"
+            return "book"
         case .account:
             return "person.fill"
         }

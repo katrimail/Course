@@ -24,7 +24,8 @@ struct MainView: View {
             case .add:
                 AddTask()
             case .likes:
-                like()
+//                like()
+            PageView()
             case .account:
                 Account()
             }
@@ -32,7 +33,7 @@ struct MainView: View {
             VStack {
                 Spacer()
                 DarkTabBar(viewRouter: viewRouter)
-            }
+            }.padding(.bottom, -34)
         }
     }
     

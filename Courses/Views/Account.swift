@@ -25,7 +25,7 @@ struct Account: View {
                      AccountMy()
                  }
                  
-             }.background(Color("Color-6").edgesIgnoringSafeArea(.all))
+             }.background(Color("Color-3").edgesIgnoringSafeArea(.all))
          }}
 
 struct Account_Previews: PreviewProvider {

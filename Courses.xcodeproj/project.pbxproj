@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		52401DCABB392E7F674C03CB /* Pods_Courses.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8D126B7E8A91ABEA30820E /* Pods_Courses.framework */; };
+		B80005CC25B77AAF00760E08 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80005CB25B77AAF00760E08 /* Page.swift */; };
+		B80005D025B77B4000760E08 /* PageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80005CF25B77B4000760E08 /* PageViewModel.swift */; };
+		B80005D325B77FCA00760E08 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80005D225B77FCA00760E08 /* PageView.swift */; };
+		B80005D625B8806B00760E08 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80005D525B8806B00760E08 /* WebView.swift */; };
+		B80005D925B88D8C00760E08 /* DropViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80005D825B88D8C00760E08 /* DropViewDelegate.swift */; };
+		B80005DC25B8CE7500760E08 /* school.json in Resources */ = {isa = PBXBuildFile; fileRef = B80005DB25B8CE7500760E08 /* school.json */; };
 		B80B953225AA60C200B52C80 /* Courses.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B80B953025AA60C200B52C80 /* Courses.xcdatamodeld */; };
 		B80B953625AA615700B52C80 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B953525AA615700B52C80 /* Persistence.swift */; };
 		B84FE14425988F8C00EE1A5E /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84FE14325988F8C00EE1A5E /* Start.swift */; };
@@ -36,6 +42,12 @@
 		2E7B0165A539547DB71F70A8 /* Pods-Courses.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Courses.release.xcconfig"; path = "Target Support Files/Pods-Courses/Pods-Courses.release.xcconfig"; sourceTree = "<group>"; };
 		6F8D126B7E8A91ABEA30820E /* Pods_Courses.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Courses.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0E6554BBD5E6AA85D1F133 /* Pods-Courses.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Courses.debug.xcconfig"; path = "Target Support Files/Pods-Courses/Pods-Courses.debug.xcconfig"; sourceTree = "<group>"; };
+		B80005CB25B77AAF00760E08 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		B80005CF25B77B4000760E08 /* PageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewModel.swift; sourceTree = "<group>"; };
+		B80005D225B77FCA00760E08 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		B80005D525B8806B00760E08 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		B80005D825B88D8C00760E08 /* DropViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewDelegate.swift; sourceTree = "<group>"; };
+		B80005DB25B8CE7500760E08 /* school.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = school.json; sourceTree = "<group>"; };
 		B80B953125AA60C200B52C80 /* CoursesCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoursesCoreData.xcdatamodel; sourceTree = "<group>"; };
 		B80B953525AA615700B52C80 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B84FE14325988F8C00EE1A5E /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
@@ -83,6 +95,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B80005C825B76B1B00760E08 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B86F9C9D25A4C2D800BE677B /* ViewRouter.swift */,
+				B80005CF25B77B4000760E08 /* PageViewModel.swift */,
+				B80005D825B88D8C00760E08 /* DropViewDelegate.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		B8A374BA258CED85008A5756 = {
 			isa = PBXGroup;
 			children = (
@@ -105,13 +127,12 @@
 		B8A374C5258CED85008A5756 /* Courses */ = {
 			isa = PBXGroup;
 			children = (
+				B80005C825B76B1B00760E08 /* ViewModel */,
 				B8ED37DC25B0A7E7002AE9DB /* Animation */,
-				B86F9C9D25A4C2D800BE677B /* ViewRouter.swift */,
-				B86F9C9A25A4C2D600BE677B /* MainView.swift */,
-				B86F9C9725A4C2D000BE677B /* DarkTabBar.swift */,
-				B8A374E52597777B008A5756 /* Modals */,
+				B8A374E52597777B008A5756 /* Model */,
 				B8A374E625977788008A5756 /* Views */,
 				B8A374C8258CED85008A5756 /* ContentView.swift */,
+				B86F9C9A25A4C2D600BE677B /* MainView.swift */,
 				B80B953025AA60C200B52C80 /* Courses.xcdatamodeld */,
 				B80B953525AA615700B52C80 /* Persistence.swift */,
 				B8A374C6258CED85008A5756 /* CoursesApp.swift */,
@@ -130,18 +151,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B8A374E52597777B008A5756 /* Modals */ = {
+		B8A374E52597777B008A5756 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				B84FE1472598967B00EE1A5E /* Data.swift */,
 				B8EA7E3A259A1D9C0083AAC9 /* DataForList.swift */,
+				B80005CB25B77AAF00760E08 /* Page.swift */,
 			);
-			path = Modals;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B8A374E625977788008A5756 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B86F9C9725A4C2D000BE677B /* DarkTabBar.swift */,
 				B84FE14325988F8C00EE1A5E /* Start.swift */,
 				B86F9CAA25A4D0E500BE677B /* Account.swift */,
 				B86F9CD525A509E300BE677B /* Likes.swift */,
@@ -149,6 +172,8 @@
 				B86F9CDB25A5B31F00BE677B /* search.swift */,
 				B86F9CE125A5B88C00BE677B /* Stat.swift */,
 				B86F9CE425A78DD100BE677B /* AddTask.swift */,
+				B80005D225B77FCA00760E08 /* PageView.swift */,
+				B80005D525B8806B00760E08 /* WebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +181,7 @@
 		B8ED37DC25B0A7E7002AE9DB /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				B80005DB25B8CE7500760E08 /* school.json */,
 				B8785AED25B10457002A65A0 /* backtoschool2.json */,
 				B8785AEA25B10451002A65A0 /* backtoschool.json */,
 				B8785AE725B1044B002A65A0 /* socialMedia.json */,
@@ -231,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B80005DC25B8CE7500760E08 /* school.json in Resources */,
 				B8785AEB25B10451002A65A0 /* backtoschool.json in Resources */,
 				B8A374CE258CED88008A5756 /* Preview Assets.xcassets in Resources */,
 				B8785AEE25B10457002A65A0 /* backtoschool2.json in Resources */,
@@ -307,11 +334,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8EA7E3B259A1D9C0083AAC9 /* DataForList.swift in Sources */,
+				B80005D625B8806B00760E08 /* WebView.swift in Sources */,
+				B80005D925B88D8C00760E08 /* DropViewDelegate.swift in Sources */,
 				B86F9CAB25A4D0E500BE677B /* Account.swift in Sources */,
 				B80B953625AA615700B52C80 /* Persistence.swift in Sources */,
 				B86F9C9B25A4C2D600BE677B /* MainView.swift in Sources */,
 				B86F9C9825A4C2D000BE677B /* DarkTabBar.swift in Sources */,
+				B80005CC25B77AAF00760E08 /* Page.swift in Sources */,
 				B84FE14425988F8C00EE1A5E /* Start.swift in Sources */,
+				B80005D325B77FCA00760E08 /* PageView.swift in Sources */,
+				B80005D025B77B4000760E08 /* PageViewModel.swift in Sources */,
 				B84FE1482598967B00EE1A5E /* Data.swift in Sources */,
 				B86F9C9E25A4C2D800BE677B /* ViewRouter.swift in Sources */,
 				B8A374E1259776D2008A5756 /* profile.swift in Sources */,

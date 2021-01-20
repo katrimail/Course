@@ -180,7 +180,7 @@ struct Statistics : View {
                     .padding()
                 }
             }
-            .background(Color.black.edgesIgnoringSafeArea(.all))
+            .background(Color("Color-9").edgesIgnoringSafeArea(.all))
         }
 //        .preferredColorScheme(.dark)
         // status bar color is not changing

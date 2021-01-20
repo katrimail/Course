@@ -48,8 +48,8 @@ struct DarkTabBar: View {
     
     //MARK: - Drawing constants
     let gradientColor = LinearGradient(gradient: Gradient(colors: [.white, .clear]), startPoint: .top, endPoint: .bottom)
-    let tabCornerRadius: CGFloat = 15
-    let tabSizeWidth: CGFloat = 350
+    let tabCornerRadius: CGFloat = 0
+    let tabSizeWidth: CGFloat = 415
     let tabSizeHeight: CGFloat = 65
     let tabItemSize: CGFloat = 25
     
